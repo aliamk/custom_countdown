@@ -109,7 +109,7 @@ ul {
 }
 
 li {
-
+  display: inline-block; /* Put all the ul in a horizontal line */
   font-size: 30px;
   list-style-type: none;
   padding: 10px;
@@ -128,6 +128,28 @@ li span {
   top: 60px;
 }
 
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: rgb(232, 40, 40)
+  }
+  25% {
+    color: rgb(208, 231, 77)
+  }
+  50% {
+    color: rgb(16, 212, 81);
+    transform: scale(1.5);
+  }
+  75% {
+    color: rgb(84, 175, 236)
+  }
+  100% {
+    color: rgb(165, 26, 146)
+  }
+}
 
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {

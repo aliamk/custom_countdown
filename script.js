@@ -28,10 +28,10 @@ const today = new Date().toISOString().split('T')[0] // 2020-07-16T16:55:20.243Z
 // console.log(today)
 dateEl.setAttribute('min', today)
 
-// Populate Countdown / Complete
+// Populate Countdown
 function updateDOM() {
   countdownActive = setInterval(() => {
-    const now = new Date().getTime() // return number of milliseconds from 1970 to now
+    const now = new Date().getTime() // return number of milliseconds from Jan 1970 to now
     const distance = countdownValue - now
     // console.log('distance:', distance)
     
@@ -45,7 +45,7 @@ function updateDOM() {
     inputContainer.hidden = true
 
     // If countdown has ended, show complete
-    if (distance < 0) {
+    if ( distance < 0 ) {
       countdownEl.hidden = true
       clearInterval(countdownActive)
       completeElInfo.textContent = `${countdownTitle} finished on ${countdownDate}`
